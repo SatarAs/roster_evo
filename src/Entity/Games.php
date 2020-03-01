@@ -36,6 +36,11 @@ class Games
      */
     private $description;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Section", mappedBy="game", cascade={"persist", "remove"})
+     */
+    private $section;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,23 @@ class Games
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getSection(): ?Section
+    {
+        return $this->section;
+    }
+
+    public function setSection(Section $section): self
+    {
+        $this->section = $section;
+
+        // set the owning side of the relation if necessary
+        if ($section->getGame() !== $this) {
+            $section->setGame($this);
+        }
 
         return $this;
     }
