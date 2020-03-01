@@ -133,11 +133,6 @@ class User
      */
     private $sentMessages;
 
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\InfosPlayer", mappedBy="user", cascade={"persist", "remove"})
-     */
-    private $infosPlayer;
-
     public function __construct()
     {
         $this->receivedMessages = new ArrayCollection();
@@ -468,23 +463,6 @@ class User
             if ($sentMessage->getSender() === $this) {
                 $sentMessage->setSender(null);
             }
-        }
-
-        return $this;
-    }
-
-    public function getInfosPlayer(): ?InfosPlayer
-    {
-        return $this->infosPlayer;
-    }
-
-    public function setInfosPlayer(InfosPlayer $infosPlayer): self
-    {
-        $this->infosPlayer = $infosPlayer;
-
-        // set the owning side of the relation if necessary
-        if ($infosPlayer->getUser() !== $this) {
-            $infosPlayer->setUser($this);
         }
 
         return $this;
