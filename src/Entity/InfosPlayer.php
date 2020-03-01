@@ -17,7 +17,7 @@ class InfosPlayer
     private $id;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\User", inversedBy="infosPlayer", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="App\Entity\Section", inversedBy="infosPlayer", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
@@ -38,7 +38,7 @@ class InfosPlayer
     private $validatedAt;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Section", inversedBy="user")
      * @ORM\JoinColumn(nullable=false)
      */
     private $validatedBy;
