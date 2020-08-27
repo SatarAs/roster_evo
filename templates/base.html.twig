@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app.request.getLocale() }}">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}{% block page_title '' %} | {% block site_title 'Roster Evo' %}{% endblock %}</title>
+        {{ encore_entry_link_tags('app') }}
+        {% block stylesheets '' %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block body '' %}
+
+        {% block javascripts '' %}
     </body>
 </html>
