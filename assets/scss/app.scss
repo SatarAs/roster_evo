@@ -1,0 +1,15 @@
+@import "variables";
+
+body {
+    background-color: lightgray;
+}
+
+.ui.segment {
+     border-radius: 0!important;
+     background: $dark!important;
+ }
+
+// Bouton de connexion icon User
+.right.menu > .item > i.icon {
+  margin: 0!important;
+}
