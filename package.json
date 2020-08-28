@@ -1,6 +1,6 @@
 {
     "devDependencies": {
-        "@symfony/webpack-encore": "^0.28.2",
+        "@symfony/webpack-encore": "^0.30.2",
         "core-js": "^3.0.0",
         "gulp-header": "^2.0.9",
         "less-loader": "4.1.0",
@@ -16,7 +16,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "acorn": "^6.4.1",
+        "acorn": "^8.0.1",
         "elliptic": "^6.5.3",
         "fomantic-ui": "^2.8.6",
         "fomantic-ui-less": "^2.8.6",
