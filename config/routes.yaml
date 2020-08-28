@@ -1,3 +1,95 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /home
+    controller: App\Controller\HomeController::index
+
+#######################################
+#                Index                #
+#######################################
+#
+# Connexion :
+#         fr : /connexion
+#         en : /login
+#
+# Déconnexion :
+#         fr : /deconnexion
+#         en : /logout
+#
+# Inscription :
+#         fr : /inscription
+#         en : /register
+#
+# Mot de passe oublié :
+#         fr : /mot-de-passe-oublie
+#         en : /forgot-password
+#
+#######################################
+#               Account               #
+#######################################
+#
+# Mon compte :
+#         fr : /mon-compte
+#         en : /my-account
+#
+# Edition du compte :
+#         fr : /editer-compte
+#         en : /edit-account
+#
+# Supprimer-compte :
+#         fr : /supprimer-compte
+#         en : /delete-account
+#
+#######################################
+#                Games                #
+#######################################
+#
+# Liste des jeux :
+#         fr : /liste-des-jeux
+#         en : /list-of-games
+#
+# Ajout d'un jeu :
+#         fr : /ajout-jeu
+#         en : /add-game
+#
+# Affichage d'un jeu :
+#         fr : /{nom-du-jeu}
+#         en : /{name-of-game}
+#
+# Modification d'un jeu :
+#         fr : /edition/{nom-du-jeu}
+#         en : /edit/{name-of-game}
+#
+# Suppression d'un jeu :
+#         fr : /suppression/{idGame}
+#         en : /delete/{idGame}
+#
+#######################################
+#               Section               #
+#######################################
+#
+# Sélection (Choix d'un jeu) d'une section (1 max) :
+#         fr : /choix-section-de-jeu
+#         en : /choice-of-game-section
+#
+#######################################
+#             Utilisateurs            #
+#######################################
+#
+# Affichage d'un joueur :
+#         fr : /profil/{pseudo}
+#         en : /profil/{pseudo}
+#
+# Edition d'un utilisateur :
+#         fr : /profil/editer/{pseudo}
+#         en : /profil/edit/{pseudo}
+#
+# Supprimer un utilisateur :
+#         fr : /profil/supprimer/{pseudo}
+#         en : /profil/delete/{pseudo}
+#
+# Archiver un utilisateur :
+#         fr : /profil/archiver/{pseudo}
+#         en : /profil/archive/{pseudo}
+#
+# 
+
+

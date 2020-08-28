@@ -1,7 +1,9 @@
 {
     "devDependencies": {
-        "@symfony/webpack-encore": "^0.28.2",
+        "@symfony/webpack-encore": "^0.30.2",
         "core-js": "^3.0.0",
+        "gulp-header": "^2.0.9",
+        "less-loader": "7.0.0",
         "regenerator-runtime": "^0.13.2",
         "webpack-notifier": "^1.6.0"
     },
@@ -12,5 +14,21 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
+    },
+    "dependencies": {
+        "acorn": "^8.0.1",
+        "elliptic": "^6.5.3",
+        "fomantic-ui": "^2.8.6",
+        "fomantic-ui-less": "^2.8.6",
+        "gulp": "^4.0.2",
+        "jquery": "^3.5.1",
+        "less-plugin-semantic-ui": "0.0.2",
+        "lodash": "^4.17.19",
+        "minimist": "^1.2.3",
+        "node-sass": "^4.14.1",
+        "npm": "^6.14.7",
+        "sass-loader": "7.0.1",
+        "serialize-javascript": "^4.0.0",
+        "websocket-extensions": "^0.1.4"
     }
 }
