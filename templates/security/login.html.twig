@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title %}Login!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+            <h2 class="ui center aligned header">
+                Connecte-toi !
+            </h2>
+            <form class="ui form">
+                <div class="ui stacked segment">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input name="email" placeholder="E-mail ou Pseudo" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input name="password" placeholder="Mot de passe" type="password">
+                        </div>
+                    </div>
+                    <div class="ui fluid large teal submit button">Connexion</div>
+                </div>
+                <div class="ui error message"></div>
+            </form>
+            <div class="ui message">Pas encore inscrit ?<a href="#"> Crée ton compte</a></div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

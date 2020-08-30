@@ -1,9 +1,12 @@
 @import "variables";
+@import "login";
+@import "register";
 
 body {
-    background-color: lightgray;
+    background-color: #e6dddd73!important;
 }
 
+// Navbar
 .ui.segment {
      border-radius: 0!important;
      background: $dark!important;

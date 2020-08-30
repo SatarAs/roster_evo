@@ -1,0 +1,17 @@
+@import "variables";
+
+.ui.middle.aligned.center.aligned.grid {
+  margin-top: 20px;
+}
+
+.column {
+  max-width: 450px;
+}
+
+.ui.stacked.segment {
+  background: #F8F8F9!important;
+}
+
+.ui.fluid.large.teal.button {
+  background: $dark;
+}

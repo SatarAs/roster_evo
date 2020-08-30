@@ -1,0 +1,15 @@
+@import "variables";
+
+.ui.fluid.large.teal.button {
+  background: $dark;
+}
+
+.ui.toggle.checkbox input:checked ~ .box:before,
+.ui.toggle.checkbox input:checked ~ .color.dark:before {
+  background: #2c2e30!important;
+}
+
+.ui.toggle.checkbox input:hover ~ .box:before,
+.ui.toggle.checkbox input:hover ~ .color.dark:before {
+  background: #cfcbcb!important;
+}

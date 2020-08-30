@@ -1,0 +1,86 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title %}Register!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+            <h2 class="ui center aligned header">
+                Inscris-toi !
+            </h2>
+            <form class="ui form">
+                <h4 class="ui dividing header">Informations</h4>
+                <div class="field">
+                    <label>Joueur</label>
+                    <div class="field">
+                        <input type="text" name="username" placeholder="Pseudo">
+                    </div>
+                    <div class="field">
+                        <input type="text" name="email" placeholder="Adresse mail">
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <input type="text" name="first-name" placeholder="Prénom">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="last-name" placeholder="Nom">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui calendar">
+                            <div class="ui input">
+                                <input type="date" placeholder="Date/Time">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Adresse</label>
+                    <div class="fields">
+                        <div class="four wide field">
+                            <input type="text" name="address-2" placeholder="N°">
+                        </div>
+                        <div class="twelve wide field">
+                            <input type="text" name="address" placeholder="Rue">
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="five wide field">
+                            <input type="text" name="postal_code" placeholder="Code Postal">
+                        </div>
+                        <div class="twelve wide field">
+                            <input type="text" name="city" placeholder="Ville">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Confidentialité</label>
+                    <div class="field">
+                        <input type="text" name="password" placeholder="Mot de passe">
+                    </div>
+                    <div class="field">
+                        <input type="text" name="password_confirm" placeholder="Confirmation du mot de passe">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" name="public">
+                        <label class="color dark">J'accepte les termes et conditions</label>
+                    </div>
+                </div>
+
+                <div class="ui fluid large teal submit button" tabindex="0">Créer mon compte</div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}
