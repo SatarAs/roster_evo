@@ -54,6 +54,11 @@ class User
     private $phoneNumber;
 
     /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $street;
+
+    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $address;
@@ -224,6 +229,18 @@ class User
     public function setPhoneNumber(?string $phoneNumber): self
     {
         $this->phoneNumber = $phoneNumber;
+
+        return $this;
+    }
+
+    public function getStreet(): ?int
+    {
+        return $this->street;
+    }
+
+    public function setStreet(?int $street): self
+    {
+        $this->street = $street;
 
         return $this;
     }
@@ -467,4 +484,5 @@ class User
 
         return $this;
     }
+
 }

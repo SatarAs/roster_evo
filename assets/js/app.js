@@ -12,8 +12,11 @@ require('../../public/semantic/dist/semantic.css');
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 const $ = require('jquery');
 
+
+require('jquery');
 require('@fortawesome/fontawesome-free/css/all.min.css');
 require('@fortawesome/fontawesome-free/js/all.js');
+require('fomantic-ui/dist/semantic');
 
 $(document).ready(function () {
 

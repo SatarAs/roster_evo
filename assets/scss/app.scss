@@ -1,6 +1,7 @@
 @import "variables";
 @import "login";
 @import "register";
+@import "~fomantic-ui/dist/semantic.css";
 
 body {
     background-color: #e6dddd73!important;
@@ -15,4 +16,8 @@ body {
 // Bouton de connexion icon User
 .right.menu > .item > i.icon {
   margin: 0!important;
+}
+
+.t-align-c {
+  text-align: center;
 }

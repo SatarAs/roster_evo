@@ -14,67 +14,83 @@
                 Inscris-toi !
             </h2>
             <form class="ui form">
-                <h4 class="ui dividing header">Informations</h4>
-                <div class="field">
-                    <label>Joueur</label>
+                <div class="ui stacked segment left aligned">
+                    <h4 class="ui dividing header center aligned">Informations</h4>
                     <div class="field">
-                        <input type="text" name="username" placeholder="Pseudo">
-                    </div>
-                    <div class="field">
-                        <input type="text" name="email" placeholder="Adresse mail">
-                    </div>
-                    <div class="two fields">
-                        <div class="field">
-                            <input type="text" name="first-name" placeholder="Prénom">
+                        <label class="t-align-c">Joueur</label>
+                        <div class="required field">
+                            <label>Pseudo</label>
+                            <input type="text" name="username" placeholder="Pseudo">
                         </div>
-                        <div class="field">
-                            <input type="text" name="last-name" placeholder="Nom">
+                        <div class="required field">
+                            <label>Adresse Mail</label>
+                            <input type="text" name="email" placeholder="Adresse mail">
+                        </div>
+                        <div class="two fields">
+                            <div class="required field">
+                                <label>Prénom</label>
+                                <input type="text" name="first-name" placeholder="Prénom">
+                            </div>
+                            <div class="required field">
+                                <label>Nom</label>
+                                <input type="text" name="last-name" placeholder="Nom">
+                            </div>
+                        </div>
+                        <div class="required field">
+                            <label>Date de naissance</label>
+                            <div class="ui calendar" id="french_calendar">
+                                <div class="ui input">
+                                    <input type="text" placeholder="Date de naissance">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="required field">
+                            <label>Numéro de téléphone</label>
+                            <input type="tel" name="phone" placeholder="Numéro de téléphone">
                         </div>
                     </div>
                     <div class="field">
-                        <div class="ui calendar">
-                            <div class="ui input">
-                                <input type="date" placeholder="Date/Time">
+                        <div class="fields">
+                            <div class="four wide field">
+                                <label>N°</label>
+                                <input type="text" name="address-2" placeholder="N°">
+                            </div>
+                            <div class="twelve wide field">
+                                <label>Rue</label>
+                                <input type="text" name="address" placeholder="Rue">
+                            </div>
+                        </div>
+                        <div class="required fields">
+                            <div class="five wide field">
+                                <label>Code postal</label>
+                                <input type="text" name="postal_code" placeholder="Code Postal">
+                            </div>
+                            <div class="twelve wide field">
+                                <label>Ville</label>
+                                <input type="text" name="city" placeholder="Ville">
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="field">
-                    <label>Adresse</label>
-                    <div class="fields">
-                        <div class="four wide field">
-                            <input type="text" name="address-2" placeholder="N°">
-                        </div>
-                        <div class="twelve wide field">
-                            <input type="text" name="address" placeholder="Rue">
-                        </div>
-                    </div>
-                    <div class="fields">
-                        <div class="five wide field">
-                            <input type="text" name="postal_code" placeholder="Code Postal">
-                        </div>
-                        <div class="twelve wide field">
-                            <input type="text" name="city" placeholder="Ville">
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <label>Confidentialité</label>
                     <div class="field">
-                        <input type="text" name="password" placeholder="Mot de passe">
+                        <label class="t-align-c">Confidentialité</label>
+                        <div class="required field">
+                            <label>Mot de passe</label>
+                            <input type="text" name="password" placeholder="Mot de passe">
+                        </div>
+                        <div class="required field">
+                            <label>Confirmation du mot de passe</label>
+                            <input type="text" name="password_confirm" placeholder="Confirmation du mot de passe">
+                        </div>
                     </div>
-                    <div class="field">
-                        <input type="text" name="password_confirm" placeholder="Confirmation du mot de passe">
+                    <div class="required field">
+                        <div class="ui toggle checkbox">
+                            <input type="checkbox" name="public">
+                            <label class="color dark">J'accepte les termes et conditions</label>
+                        </div>
                     </div>
+                    <div class="ui fluid large teal submit button" tabindex="0">Créer mon compte</div>
                 </div>
-                <div class="field">
-                    <div class="ui toggle checkbox">
-                        <input type="checkbox" name="public">
-                        <label class="color dark">J'accepte les termes et conditions</label>
-                    </div>
-                </div>
-
-                <div class="ui fluid large teal submit button" tabindex="0">Créer mon compte</div>
             </form>
         </div>
     </div>
@@ -82,5 +98,22 @@
 {% endblock %}
 
 {% block javascripts %}
+
+    <script>
+        $('#french_calendar')
+            .calendar({
+                type: 'date',
+                text: {
+                    days: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+                    months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
+                    monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    today: 'Aujourd\'hui',
+                    now: 'Maintenant',
+                    am: 'AM',
+                    pm: 'PM'
+                }
+            })
+        ;
+    </script>
 
 {% endblock %}
